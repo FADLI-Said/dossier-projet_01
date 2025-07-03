@@ -1,0 +1,636 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+}
+body #navbar {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  body #navbar {
+    background-color: #FFEFC1;
+  }
+  body #navbar a {
+    color: black !important;
+  }
+}
+body #navbar.scrolled {
+  background-color: #FFEFC1;
+  z-index: 5;
+  border-bottom: #555 1px solid;
+}
+body #navbar.scrolled a {
+  color: black;
+}
+body #navbar a {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+body #navbar ul {
+  gap: 4rem;
+}
+body #navbar ul a {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  position: relative;
+}
+body #navbar ul a::before, body #navbar ul a::after {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 0 solid transparent;
+  width: 0%;
+  height: 0%;
+  transition: all 0.5s ease;
+}
+body #navbar ul a::after {
+  top: 0;
+  left: 0;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+}
+body #navbar ul a::before {
+  right: 0;
+  bottom: 0;
+  border-bottom: 2px solid transparent;
+  border-right: 2px solid transparent;
+}
+body #navbar ul a:hover::before, body #navbar ul a:hover::after {
+  width: 100%;
+  height: 100%;
+  border-color: grey;
+}
+body header {
+  height: 100vh;
+  min-height: 40rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%), url("../images/pexels-n-voitkevich-5128272.jpg");
+  background-size: cover;
+  background-position: bottom;
+  padding-top: 4.5rem;
+  color: white;
+}
+body h2 {
+  margin: 0;
+  padding: 1rem 0;
+}
+body section {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding-bottom: 3rem;
+}
+body section #prestations {
+  width: 65%;
+}
+@media (max-width: 768px) {
+  body section #prestations {
+    width: 90%;
+  }
+}
+body section #prestations .prestation {
+  transition: box-shadow 0.3s ease-out, transform 0.3s ease-out;
+}
+body section #prestations .prestation img {
+  width: 100%;
+}
+body section #prestations .prestation h3 {
+  color: black;
+  margin: 0;
+  font-size: 1.2rem;
+}
+body section #prestations .prestation:hover {
+  transform: translateY(-5px);
+  transition: 0.3s ease-in;
+}
+body section #horraires {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+body section #horraires #note {
+  flex-grow: 1;
+  max-height: -moz-max-content;
+  max-height: max-content;
+}
+body section #horraires #note .overflow-auto {
+  flex-grow: 1;
+  height: 20rem;
+  padding: 1rem;
+}
+body section #horraires #note button {
+  color: black;
+  --bs-border-color: black;
+}
+body section #horraires #note button.active {
+  font-weight: bold;
+  background-color: #FFEFC1;
+  border-bottom: none;
+}
+body section#inscription {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%), url("../images/pexels-n-voitkevich-5128080.jpg");
+  background-size: cover;
+  background-position: bottom;
+  padding-top: 4.5rem;
+}
+body section#inscription .retour {
+  padding-left: 2rem;
+  font-size: 1.3rem;
+  color: white;
+  text-decoration: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  top: 4.5rem;
+  left: 2rem;
+}
+body section#inscription .retour:hover {
+  text-decoration: underline;
+  transition: all 0.3s;
+}
+body section#inscription form input {
+  color: white !important;
+  box-shadow: 0 0 0px 1000px #212529 inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+body section#inscription form label {
+  color: black;
+}
+body section#inscription form a {
+  color: white;
+}
+body section#inscription form a:hover {
+  transition: all 0.3s;
+  color: #ccc;
+}
+body section#connexion {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  min-height: 40rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%), url("../images/pexels-n-voitkevich-5128093.jpg");
+  background-size: cover;
+  background-position: bottom;
+  padding-top: 4.5rem;
+}
+body section#connexion .retour {
+  padding-left: 2rem;
+  font-size: 1.3rem;
+  color: white;
+  text-decoration: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  top: 4.5rem;
+  left: 2rem;
+}
+body section#connexion .retour:hover {
+  text-decoration: underline;
+  transition: all 0.3s;
+}
+body section#connexion form input {
+  color: white !important;
+  box-shadow: 0 0 0px 1000px #212529 inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+body section#connexion form label {
+  color: black;
+}
+body section#connexion form a {
+  color: white;
+}
+body section#connexion form a:hover {
+  transition: all 0.3s;
+  color: #ccc;
+}
+body section#reservation {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+  color: white;
+  padding-top: 4.5rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.8) 100%), url("../images/pexels-n-voitkevich-5128093.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
+body section#reservation ul {
+  background-color: #111 !important;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+body section#reservation ul button {
+  color: white;
+}
+body section#reservation ul button.active {
+  background-color: #2d323c;
+}
+body section#reservation .retour {
+  padding-left: 2rem;
+  font-size: 1.3rem;
+  color: white;
+  text-decoration: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  top: 4.5rem;
+  left: 2rem;
+}
+body section#reservation .retour:hover {
+  text-decoration: underline;
+  transition: all 0.3s;
+}
+body section#reservation #prestations {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #23272f;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.18);
+}
+body section#reservation #prestations p {
+  margin: 0;
+}
+body section#reservation #calendrier {
+  width: 70%;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.18);
+  display: flex;
+  gap: 1rem;
+  margin: 0 auto;
+}
+body section#reservation #calendrier #mois {
+  width: 100%;
+}
+body section#reservation #calendrier #mois .calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+body section#reservation #calendrier #mois .calendar-header .calendar-month {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #fff;
+}
+body section#reservation #calendrier #mois .calendar-header .calendar-nav {
+  background: #2d323c;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1.1rem;
+  color: #bbb;
+  transition: background 0.2s;
+}
+body section#reservation #calendrier #mois .calendar-header .calendar-nav:hover {
+  background: #444b58;
+}
+body section#reservation #calendrier #mois .calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+body section#reservation #calendrier #mois .calendar-grid .calendar-day {
+  background: #2d323c;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1rem;
+  color: #e2e6ed;
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+}
+body section#reservation #calendrier #mois .calendar-grid .calendar-day:hover:not(.calendar-day-label):not(.calendar-empty) {
+  background: #444b58;
+  color: #fff;
+}
+body section#reservation #calendrier #mois .calendar-grid .week-end {
+  background: #000000;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1rem;
+  color: #e2e6ed;
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+  cursor: default;
+}
+body section#reservation #calendrier #mois .calendar-grid .calendar-day-label {
+  background: transparent;
+  font-weight: bold;
+  color: #8a8fa3;
+  padding-bottom: 4px;
+}
+body section#reservation #calendrier #mois .calendar-grid .calendar-empty {
+  background: transparent;
+  cursor: default;
+}
+@media (max-width: 500px) {
+  body section#reservation #calendrier #mois .calendar-container.dark {
+    padding: 12px 2px 8px 2px;
+    min-width: 0;
+  }
+  body section#reservation #calendrier #mois .calendar-day {
+    font-size: 0.9rem;
+    padding: 7px 0;
+  }
+}
+body section#reservation #calendrier #heure {
+  width: 40%;
+}
+body section#reservation #calendrier #heure ul {
+  background-color: #111 !important;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+body section#reservation #calendrier #heure ul button {
+  color: white;
+}
+body section#reservation #calendrier #heure ul button.active {
+  background-color: #2d323c;
+}
+body section#reservation #calendrier #heure .active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+body section#reservation #calendrier #heure .active .calendar-hour {
+  background: #2d323c;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1rem;
+  color: #e2e6ed;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+  width: 100%;
+}
+body section#reservation #calendrier #heure .active .calendar-hour:hover {
+  background: #444b58;
+  color: #fff;
+}
+body section#reservation #horraires {
+  width: 70%;
+  margin: 0 auto;
+  min-height: 200px;
+  max-height: 350px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  color: white;
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: #444b58 #23272f;
+}
+body section#reservation #horraires::-webkit-scrollbar {
+  width: 8px;
+  background: #23272f;
+}
+body section#reservation #horraires::-webkit-scrollbar-thumb {
+  background: #444b58;
+  border-radius: 8px;
+}
+body section#reservation #horraires::-webkit-scrollbar-track {
+  background: #23272f;
+}
+body section#reservation #horraires div {
+  width: 100%;
+}
+body section#reservation #horraires div .time-slot,
+body section#reservation #horraires div .time-slot-btn {
+  display: block;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  margin: 0;
+  background: #2d323c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-bottom: 0.3rem;
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+}
+body section#reservation #horraires div .time-slot:hover,
+body section#reservation #horraires div .time-slot-btn:hover {
+  background: #444b58;
+  color: #fff;
+}
+body section#prestation {
+  min-height: 100vh;
+  min-height: 40rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%), url("../images/pexels-n-voitkevich-5128272.jpg");
+  background-size: cover;
+  background-position: bottom;
+  padding-top: 4.5rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+body section#prestation #prestations {
+  width: 80%;
+  margin: 0 auto;
+}
+body section#profil {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%), url("../images/pexels-n-voitkevich-5128080.jpg");
+  background-size: cover;
+  background-position: bottom;
+  padding-top: 4.5rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+body section#profil .retour {
+  padding-left: 2rem;
+  font-size: 1.3rem;
+  color: white;
+  text-decoration: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  top: 4.5rem;
+  left: 2rem;
+}
+body section#profil .retour:hover {
+  text-decoration: underline;
+  transition: all 0.3s;
+}
+body section#profil h2 {
+  background-color: transparent !important;
+}
+body section#admin {
+  min-height: 100vh;
+  min-height: 40rem;
+  background-size: cover;
+  background-position: bottom;
+  padding-top: 4.5rem;
+  display: flex;
+  flex-direction: column;
+}
+body section#admin .retour {
+  padding-left: 2rem;
+  font-size: 1.3rem;
+  color: white;
+  text-decoration: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  top: 4.5rem;
+  left: 2rem;
+}
+body section#admin .retour:hover {
+  text-decoration: underline;
+  transition: all 0.3s;
+}
+body section#admin #calendrier-admin {
+  width: 70%;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0 auto;
+}
+body section#admin #calendrier-admin ul {
+  background-color: #FFEFC1 !important;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+body section#admin #calendrier-admin ul button {
+  color: #2d323c;
+}
+body section#admin #calendrier-admin ul button.active {
+  background-color: #fadb80;
+}
+body section#admin #calendrier-admin #mois {
+  width: 100%;
+}
+body section#admin #calendrier-admin #mois .calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+body section#admin #calendrier-admin #mois .calendar-header .calendar-month {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+body section#admin #calendrier-admin #mois .calendar-header .calendar-nav {
+  background: #2d323c;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1.1rem;
+  color: #bbb;
+  transition: background 0.2s;
+}
+body section#admin #calendrier-admin #mois .calendar-header .calendar-nav:hover {
+  background: #444b58;
+}
+body section#admin #calendrier-admin #mois .calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+body section#admin #calendrier-admin #mois .calendar-grid .calendar-day {
+  background: #fadb80;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1rem;
+  color: #555;
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+}
+body section#admin #calendrier-admin #mois .calendar-grid .calendar-day:hover:not(.calendar-day-label):not(.calendar-empty) {
+  background: #555;
+  color: #fadb80;
+}
+body section#admin #calendrier-admin #mois .calendar-grid .week-end {
+  background: #212529;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1rem;
+  color: #e2e6ed;
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+  cursor: default;
+}
+body section#admin #calendrier-admin #mois .calendar-grid .calendar-day-label {
+  background: transparent;
+  font-weight: bold;
+  color: #8a8fa3;
+  padding-bottom: 4px;
+}
+body section#admin #calendrier-admin #mois .calendar-grid .calendar-empty {
+  background: transparent;
+  cursor: default;
+}
+@media (max-width: 500px) {
+  body section#admin #calendrier-admin #mois .calendar-container.dark {
+    padding: 12px 2px 8px 2px;
+    min-width: 0;
+  }
+  body section#admin #calendrier-admin #mois .calendar-day {
+    font-size: 0.9rem;
+    padding: 7px 0;
+  }
+}
+body section#ajouter-prestation, body section#modifier-prestation {
+  height: 100vh;
+  min-height: 40rem;
+  background-size: cover;
+  background-position: bottom;
+  padding-top: 4.5rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+body section#ajouter-prestation form input, body section#modifier-prestation form input {
+  color: white !important;
+  box-shadow: 0 0 0px 1000px #212529 inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+body section#ajouter-prestation form input#prestation_image::file-selector-button, body section#modifier-prestation form input#prestation_image::file-selector-button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+body section#ajouter-prestation form label, body section#modifier-prestation form label {
+  color: black;
+}
+body footer {
+  background-color: #FFEFC1;
+  border-top: #555 1px solid;
+}/*# sourceMappingURL=style.css.map */
